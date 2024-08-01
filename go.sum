@@ -333,6 +333,8 @@ github.com/tdewolff/parse v2.3.2+incompatible h1:hGsUwesFq56iB0T/CXFy58nU8OiCZ3d
 github.com/tdewolff/parse v2.3.2+incompatible/go.mod h1:8oBwCsVmUkgHO8M5iCzSIDtpzXOT0WXX9cWhz+bIzJQ=
 github.com/tdewolff/test v1.0.3 h1:oQqvxCCoUexB1bWZzvCzWG2VTqOIvWBV1JVg2OOFQi0=
 github.com/tdewolff/test v1.0.3/go.mod h1:6DAvZliBAAnD7rhVgwaM7DE5/d9NMOAJ09SqYqeK4QE=
+github.com/thedevsaddam/docgen v0.0.0-20220407173355-67e675d7b791 h1:cDVFbvXUJx0fbZ3QLRKxorO+cOPB9VgEhpowPEsOdWA=
+github.com/thedevsaddam/docgen v0.0.0-20220407173355-67e675d7b791/go.mod h1:FKabUQxlASZakNFMGa7Sz9JRgBXP1I2XCdCcIwdygow=
 github.com/tv42/httpunix v0.0.0-20150427012821-b75d8614f926/go.mod h1:9ESjWnEqriFuLhtthL60Sar/7RFoluCcXsuvEwTV5KM=
 github.com/yuin/goldmark v1.1.25/go.mod h1:3hX8gzYuyVAZsxl0MRgGTJEmQBFcNTphYh9decYSb74=
 github.com/yuin/goldmark v1.1.27/go.mod h1:3hX8gzYuyVAZsxl0MRgGTJEmQBFcNTphYh9decYSb74=
