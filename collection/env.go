@@ -16,18 +16,40 @@ type Environment struct {
 }
 
 // Open open an environment file
+// func (e *Environment) Open(rdr io.Reader) error {
+// 	dcr := json.NewDecoder(rdr)
+// 	if err := dcr.Decode(&e); err != nil {
+// 		return err
+// 	}
+// 	for i := len(e.Values) - 1; i >= 0; i-- {
+// 		if !e.Values[i].Enabled {
+// 			e.Values = append(e.Values[:i], e.Values[i+1:]...)
+// 		}
+// 	}
+// 	return nil
+// }
+
 func (e *Environment) Open(rdr io.Reader) error {
 	dcr := json.NewDecoder(rdr)
 	if err := dcr.Decode(&e); err != nil {
 		return err
 	}
+
+	// Filter out disabled values
 	for i := len(e.Values) - 1; i >= 0; i-- {
 		if !e.Values[i].Enabled {
 			e.Values = append(e.Values[:i], e.Values[i+1:]...)
 		}
 	}
+
+	// Reverse the slice
+	for i, j := 0, len(e.Values)-1; i < j; i, j = i+1, j-1 {
+		e.Values[i], e.Values[j] = e.Values[j], e.Values[i]
+	}
+
 	return nil
 }
+
 
 func (e *Environment) upsertVariable(f Field) {
 	var update bool
